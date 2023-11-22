@@ -73,14 +73,14 @@ ssh -p 14421 baturay@6.tcp.eu.ngrok.io #this is the way with ngrok
 
 ```
 If VS Code cannot automatically detect the type of server you are connecting to, you will be asked to select the type manually. In our case it's Linux
-![[Pasted image 20231122110427.png]]
+![](https://github.com/ateshakan/notes_and_more/blob/main/Pasted%20image%2020231122110427.png)
 
 1. Open the project folder by navigating to File > Open Folder and selecting **/home/baturay/Desktop/breathment/samurAI**. Enter your password when prompted.
 2. Ensure you are using Python 3.8.10 for this repository.
 3. Run both the Front End and Back End repositories on the local machine, not on the host.
 4. If you encounter difficulties connecting to port 5000, consider removing any automatic forwarding ports (e.g., 5001) to resolve the issue. You can find this on VScode PORTs tab.
 
-![[Pasted image 20231122111312.png]]
+![Pasted image 20231122111312.png](https://github.com/ateshakan/notes_and_more/blob/main/Pasted%20image%2020231122111312.png)
 
 
 # VNC - TigerVNC Installation
@@ -185,4 +185,4 @@ We only need **6.tcp.eu.ngrok.io:14421** part.
 [Download TightVNC](https://www.tightvnc.com/download.php)
 
 Insert the IP and Connect
-![Pasted image 20231122105355.png]
+![Pasted image 20231122105355.png](https://github.com/ateshakan/notes_and_more/blob/main/Pasted%20image%2020231122105355.png)
