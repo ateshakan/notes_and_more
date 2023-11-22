@@ -185,4 +185,4 @@ We only need **6.tcp.eu.ngrok.io:14421** part.
 [Download TightVNC](https://www.tightvnc.com/download.php)
 
 Insert the IP and Connect
-![[Pasted image 20231122105355.png]]
+![Pasted image 20231122105355.png]
