@@ -1,3 +1,16 @@
+- [Ngrok Setup](#ngrok-setup)
+  * [Step 1: Install the ngrok Agent](#step-1--install-the-ngrok-agent)
+  * [Step 2: Enable SSH access](#step-2--enable-ssh-access)
+- [Vscode Remote Developement](#vscode-remote-developement)
+    + [Connect to the host:](#connect-to-the-host-)
+- [VNC - TigerVNC Installation](#vnc---tigervnc-installation)
+    + [How to install TigerVNC:](#how-to-install-tigervnc-)
+    + [How to start TigerVNC server](#how-to-start-tigervnc-server)
+    + [How to stop TigetVNC server](#how-to-stop-tigetvnc-server)
+    + [Check the port for connection](#check-the-port-for-connection)
+    + [setup ngrok for the port:](#setup-ngrok-for-the-port-)
+    + [Download a VNC Viewer:](#download-a-vnc-viewer-)
+
 # Ngrok Setup
 ## Step 1: Install the ngrok Agent
 o download and install the ngrok agent on your remote Linux device, follow these steps:
