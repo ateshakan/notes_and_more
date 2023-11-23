@@ -10,7 +10,10 @@
     + [Check the port for connection](#check-the-port-for-connection)
     + [setup ngrok for the port:](#setup-ngrok-for-the-port-)
     + [Download a VNC Viewer:](#download-a-vnc-viewer-)
-
+- [User Permission Set:](#user-permission-set-)
+    + [To create the non-root user with shell permissions.](#to-create-the-non-root-user-with-shell-permissions)
+    + [The password set:](#the-password-set-)
+    + [For the permissions of the user to create the VSCode config files on first connection:](#for-the-permissions-of-the-user-to-create-the-vscode-config-files-on-first-connection-)
 # Ngrok Setup
 ## Step 1: Install the ngrok Agent
 o download and install the ngrok agent on your remote Linux device, follow these steps:
@@ -199,3 +202,43 @@ We only need **6.tcp.eu.ngrok.io:14421** part.
 
 Insert the IP and Connect
 ![Pasted image 20231122105355.png](https://github.com/ateshakan/notes_and_more/blob/main/Pasted%20image%2020231122105355.png)
+
+
+# User Permission Set:
+### To create the non-root user with shell permissions.
+```
+sudo useradd -s /bin/bash -m USER
+```
+- `sudo`: This command is used to execute a command with superuser privileges.
+- `useradd`: This command is used to create a new user account.
+- `-s /bin/bash`: This option sets the user's login shell to `/bin/bash`. The login shell is the program that is started when a user logs in.
+- `-m`: This option creates the user's home directory if it does not exist. The home directory is usually located in `/home/username`.
+- `USER`: This is the username for the new user.
+
+### The password set:
+```
+sudo passwd USER
+```
+
+### For the permissions of the user to create the VSCode config files on first connection:
+
+```
+sudo chown -R USER /home/USER
+```
+
+- `chown`: Stands for "change owner." This command is used to change the owner of files or directories in Unix-like operating systems.
+- `-R`: Recursively change ownership of directories and their contents.
+- `USER`: This is the new owner's username.
+- `/home/USER`: This is the directory or file whose ownership is being changed.
+
+This command is changing the ownership of all files and directories under `/home/USER` to the user `USER`. This is often done to ensure that the user has full control and permissions over their home directory and its contents.
+
+
+```
+sudo chmod -R u+rX /home/USER
+```
+
+- `chmod`: Stands for "change mode." This command is used to change the permissions of a file or directory.
+- `-R`: Recursively change permissions of directories and their contents.
+- `u+rX`: This part specifies the permissions being granted. `u+r` grants read permission to the user, and `X` grants execute permission if the file is a directory or if it already has execute permission for some user.
+- `/home/USER`: This is the directory or file whose permissions are being changed.
